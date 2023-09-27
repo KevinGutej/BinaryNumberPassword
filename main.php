@@ -11,6 +11,15 @@ function generateRandomPassword($length = 20) {
     return $password;
 }
 
+$password = generateRandomPassword();
 
 
+//Turning password into binary
 
+$binaryPassword = '';
+for ($i = 0; $i < strlen($password); $i++) {
+//Finished here
+}
+
+echo "Generated Password: $password\n";
+echo "Binary Representation: $binaryPassword\n";
