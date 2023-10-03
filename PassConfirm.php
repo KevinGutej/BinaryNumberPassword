@@ -16,3 +16,19 @@
 
         <input type="submit" name="submit" value="Submit">
     </form>
+
+    <?php
+    if (isset($_POST['submit'])) {
+        $password = $_POST['password'];
+        $confirm_password = $_POST['confirm_password'];
+
+        if ($password === $confirm_password) {
+            echo "<p>Passwords match!</p>";
+        } else {
+            echo "<p>Passwords do not match. Please try again.</p>";
+        }
+    }
+    ?>
+</body>
+
+</html>
