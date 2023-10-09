@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verification Form</title>
+</head>
+<body>
+    <h1>Verification Form</h1>
+    <p>An email with a verification code has been sent to your email address.</p>
+    <form action="verify.php" method="POST">
+        <label for="verificationCode">Enter Verification Code:</label>
+        <input type="text" id="verificationCode" name="verificationCode" required>
+        
+        <br>
+
+        <input type="submit" value="Verify">
+    </form>
+
+    <script>
+        //Generating random number
+        function generateVerificationCode() {
+            return Math.floor(10000000 + Math.random() * 700000000);
+        }
+
+        const verificationCode = document.getElementById("Your verificationCode");
+        verificationCode.placeholder = "Enter the 9-digit code";
+        verificationCode.value = generateVerificationCode();
+    </script>
